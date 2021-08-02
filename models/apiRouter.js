@@ -18,11 +18,19 @@ router.post('/auth', function (request, response) {
                         request.session.cookie.maxAge = Date.now() + (10 * 1000);
                         request.session.userLevel = res[0].userlevel;
                         // return to priv url set in the cookie
-                        response.redirect((request.session.current_url) ? request.session.current_url : '/');
+                        response.send({
+                            "url" : (request.session.current_url) ? request.session.current_url : '/',
+                            "message" : "login successful",
+                            "login" : true
+                        });
                     } else {
                         request.session.loggedin = false;
                         request.session.username = null;
-                        response.redirect('/');
+                        response.send({
+                            "url" : '/',
+                            "message" : "login failed",
+                            "login": false
+                        });
                     }
                 }
             )

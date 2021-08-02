@@ -16,16 +16,15 @@ cd nodejs_express_template
 ```bash
 npm install
 ```
-3. Install and run Xampp (Apache, Mysql).
-4. Setup the Database and Sample data
+3. Setup the Database and Sample data
 ```bash
 node .\setup\setup_script.js
 ```
-5. Run the system (dev)
+4. Run the system (dev)
 ```bash
 npm run dev
 ```
-5. Run the System (prod)
+4. Run the System (prod)
 ```bash
 npm start
 ```

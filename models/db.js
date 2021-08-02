@@ -1,18 +1,11 @@
 // File dependencies
 const mysql = require('mysql');
 
-// MySql db config
-let dbConfig = {
-    "host": "localhost",
-    "user": "root",
-    "password": "",
-    "database": "students_poc",
-}
 
 let connection;
 
 // Connect to db
-function connect(){
+function connect(dbConfig){
     connection = mysql.createConnection(dbConfig);
     return new Promise((resolve, reject) => {
         connection.connect((err)=>{err?reject("cant connect to DB!"):resolve()});

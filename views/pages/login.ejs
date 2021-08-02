@@ -1,48 +1,31 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
-		<title>P.O.C -Login</title>
-		<style>
-		.login-form {
-			width: 300px;
-			margin: 0 auto;
-			font-family: Tahoma, Geneva, sans-serif;
-		}
-		.login-form h1 {
-			text-align: center;
-			color: #4d4d4d;
-			font-size: 24px;
-			padding: 20px 0 20px 0;
-		}
-		.login-form input[type="password"],
-		.login-form input[type="text"] {
-			width: 100%;
-			padding: 15px;
-			border: 1px solid #dddddd;
-			margin-bottom: 15px;
-			box-sizing:border-box;
-		}
-		.login-form input[type="submit"] {
-			width: 100%;
-			padding: 15px;
-			background-color: #535b63;
-			border: 0;
-			box-sizing: border-box;
-			cursor: pointer;
-			font-weight: bold;
-			color: #ffffff;
-		}
-		</style>
+		<%- include('../partials/head'); %>
+		<title><%- title %> -Login</title>
+		<link rel="stylesheet" href="assets/css/login.css">
+		<script src="assets/js/login.js" ></script>
+		
 	</head>
 	<body>
-		<div class="login-form">
-			<h1>Login</h1>
-			<form action="/api/auth" method="POST">
-				<input type="text" name="username" placeholder="Username" required>
-				<input type="password" name="password" placeholder="Password" required>
-				<input type="submit">
-			</form>
-		</div>
+    <div class="container">
+        <div class="header-wrapper mt30">
+            <div class="row text-center mb-2">
+                <div class="col">
+					<h1>Welcome</h1>
+					<div class="login-form">
+						<p>Please login to the system</p>
+						<form  onsubmit="return _submit(event)" action="/api/auth" method="POST">
+							<input type="text" id="username" name="username" placeholder="Username" required>
+							<input type="password" id="password" name="password" placeholder="Password" required>
+							<input type="submit">
+						</form>
+					</div>
+                </div>
+            </div>
+        </div>
+		<p class="alert" id="alertBox"></p>
+    </div>
+		
 	</body>
 </html>
