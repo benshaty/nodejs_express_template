@@ -15,19 +15,24 @@ FullStack ready template
 git clone https://github.com/benshaty/nodejs_express_template.git
 cd nodejs_express_template
 ```
-2. Install the dependencies.
+2. Delete .git folder
+``` bash
+del .git
+yes
+```
+3. Install the dependencies.
 ```bash
 npm install
 ```
-3. Setup the Database and Sample data
+4. Setup the Database and Sample data
 ```bash
 node .\setup\setup_script.js
 ```
-4. Run the system (dev)
+5. Run the system (dev)
 ```bash
 npm run dev
 ```
-4. Run the System (prod)
+6. Run the System (prod)
 ```bash
 npm start
 ```
