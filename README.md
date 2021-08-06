@@ -5,7 +5,7 @@ FullStack ready template
 - Backend server: Node.js + Express.
 - Client side: precompiled ejs pages.
 
-## Windows dependencies
+## Dependencies
 - MySql (Xampp / MySql Workbench)
 
 ## Usage
