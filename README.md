@@ -5,11 +5,14 @@ FullStack ready template
 - Backend server: Node.js + Express.
 - Client side: precompiled ejs pages.
 
+## Windows dependencies
+- MySql (Xampp / MySql Workbench)
+
 ## Usage
 
 1. Clone the repo 
 ```bash
-git clone https://github.com/benshaty/
+git clone https://github.com/benshaty/nodejs_express_template
 cd nodejs_express_template
 ```
 2. Install the dependencies.
