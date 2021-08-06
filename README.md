@@ -12,7 +12,7 @@ FullStack ready template
 
 1. Clone the repo 
 ```bash
-git clone https://github.com/benshaty/nodejs_express_template
+git clone https://github.com/benshaty/nodejs_express_template.git
 cd nodejs_express_template
 ```
 2. Install the dependencies.
